@@ -3,10 +3,6 @@
   become: yes  # Run tasks with sudo privileges
 
   tasks:
-    - name: Update apt package cache
-      apt:
-        update_cache: yes   
-
     - name: Build Docker Image
       command: docker build -t petstore .
       args:
